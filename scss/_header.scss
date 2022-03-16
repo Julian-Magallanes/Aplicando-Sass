@@ -15,9 +15,9 @@ header{
             align-items: center;
 
             .header__logo { 
-                width: 160px;
-                border-radius: 50%;
-                margin: 20px;
+                width:map-get($estilos, alto );
+                border-radius: map-get($estilos, borde );
+                margin: map-get($estilos, margen );
                 transition: 0.4s;
                 
                 &:hover{
@@ -33,6 +33,7 @@ header{
                         margin: 4px;
                 }
             }
+
             .header__title {
                 font-family: $fontTitles;
                 text-align: center;
@@ -101,3 +102,4 @@ header{
             grid-auto-rows: 1fr;
     }
 }
+

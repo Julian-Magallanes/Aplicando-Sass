@@ -3,3 +3,43 @@
     padding: 0;
     box-sizing: 0;
 }
+
+.formularioTemplate {
+    font-family: $fontSubTitles;            
+    border-radius: 5px;
+    padding: 16px;
+    margin: 4px;
+    border: 1px solid black;
+}
+
+
+@mixin main ($fondo) {
+    font-family: $fontSubTitles;
+    background-color: $fondo ;
+    padding-top: 12px;
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border: 2px black;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    text-align: center;
+}
+
+$estilos: (
+        alto: 160px,
+        borde: 50%,
+        margen: 20px,
+);
+
+$botones: (
+    diseño:rgba(201, 60, 36, 0.596),
+    programacion: rgba(62, 62, 241, 0.336),
+    trabajos: rgb(87, 148, 87),
+);
+
+@each $botones, $colors in $botones {
+    
+    .btn-#{$botones} {
+        background-color: $colors ;
+    }
+}
